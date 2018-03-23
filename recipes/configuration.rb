@@ -34,9 +34,9 @@ template "#{node['confluence']['install_path']}/confluence/WEB-INF/classes/confl
   notifies :restart, 'service[confluence]', :delayed
 end
 
-if settings['database']['type'] == 'mysql'
-  mysql_connector_j "#{node['confluence']['install_path']}/confluence/WEB-INF/lib"
-end
+## if settings['database']['type'] == 'mysql'
+##   mysql_connector_j "#{node['confluence']['install_path']}/confluence/WEB-INF/lib"
+## end
 
 if node['init_package'] == 'systemd'
   execute 'systemctl-daemon-reload' do
