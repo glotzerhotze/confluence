@@ -1,13 +1,13 @@
-name 'confluence'
-maintainer 'Azat Khadiev'
-maintainer_email 'anuriq@gmail.com'
+name 'confluence_forked'
+maintainer 'Tilo Klessen'
+maintainer_email 't.lo@klessen.cloud'
 license 'Apache-2.0'
 description 'Installs/Configures Atlassian Confluence'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '2.4.3'
+version '2.4.4'
 
-issues_url 'https://github.com/parallels-cookbooks/confluence/issues' if respond_to?(:issues_url)
-source_url 'https://github.com/parallels-cookbooks/confluence' if respond_to?(:source_url)
+issues_url 'https://github.com/glotzerhotze/confluence/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/glotzerhotze/confluence' if respond_to?(:source_url)
 
 recipe 'confluence', 'Installs/configures Atlassian Confluence'
 recipe 'confluence::apache2', 'Installs/configures Apache 2 as proxy (ports 80/443)'
@@ -32,4 +32,4 @@ depends 'mysql_connector'
 depends 'mysql2_chef_gem', '< 2.0.0'
 depends 'postgresql'
 
-# chef_version '< 13.0.0' if respond_to?(:chef_version)
+chef_version '> 13.0.0' if respond_to?(:chef_version)
