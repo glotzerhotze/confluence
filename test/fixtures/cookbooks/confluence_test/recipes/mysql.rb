@@ -3,7 +3,7 @@ node.set['confluence']['database']['version'] = '5.6'
 
 node.set['mysql']['server_root_password'] = 'iloverandompasswordsbutthiswilldo'
 
-include_recipe 'confluence'
+include_recipe 'confluence_forked'
 
 # required for 'infrataster' gem build (integration tests)
 package 'zlib-devel' if node['platform_family'] == 'rhel'

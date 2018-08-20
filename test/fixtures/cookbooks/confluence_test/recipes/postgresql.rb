@@ -18,7 +18,7 @@ elsif node['platform'] == 'centos'
   node.normal['postgresql']['setup_script'] = 'postgresql93-setup'
 end
 
-include_recipe 'confluence'
+include_recipe 'confluence_forked'
 
 # required for 'infrataster' gem build (integration tests)
 package %w(zlib-devel gcc make patch) if node['platform_family'] == 'rhel'

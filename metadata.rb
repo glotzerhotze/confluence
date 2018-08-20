@@ -9,13 +9,13 @@ version '2.4.5'
 issues_url 'https://github.com/glotzerhotze/confluence/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/glotzerhotze/confluence' if respond_to?(:source_url)
 
-recipe 'confluence', 'Installs/configures Atlassian Confluence'
-recipe 'confluence::apache2', 'Installs/configures Apache 2 as proxy (ports 80/443)'
-recipe 'confluence::database', 'Installs/configures MySQL/PostgreSQL server, database, and user for Confluence'
-recipe 'confluence::linux_installer', 'Installs/configures Confluence via Linux installer'
-recipe 'confluence::linux_standalone', 'Installs/configures Confluence via Linux standalone archive'
-recipe 'confluence::tomcat_configuration', "Configures Confluence's built-in Tomcat"
-recipe 'confluence::crowd_sso', 'Configures user authentication with Crowd single sign-on'
+recipe 'confluence_forked', 'Installs/configures Atlassian Confluence'
+recipe 'confluence_forked::apache2', 'Installs/configures Apache 2 as proxy (ports 80/443)'
+recipe 'confluence_forked::database', 'Installs/configures MySQL/PostgreSQL server, database, and user for Confluence'
+recipe 'confluence_forked::linux_installer', 'Installs/configures Confluence via Linux installer'
+recipe 'confluence_forked::linux_standalone', 'Installs/configures Confluence via Linux standalone archive'
+recipe 'confluence_forked::tomcat_configuration', "Configures Confluence's built-in Tomcat"
+recipe 'confluence_forked::crowd_sso', 'Configures user authentication with Crowd single sign-on'
 
 # supports 'amazon'
 supports 'centos'
